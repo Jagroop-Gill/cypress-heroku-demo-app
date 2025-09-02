@@ -4,6 +4,9 @@ on: push
 
 jobs:
   cypress-run:
+    env:
+      NPM_CONFIG_LEGACY_PEER_DEPS: true
+
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
