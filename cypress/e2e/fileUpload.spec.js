@@ -1,6 +1,6 @@
 import { FileUploadPage } from "../pages/fileUploadPage";
 
-describe('File Download Page Tests', () => {
+describe('File Upload Page Tests', () => {
     const fileUploadPage = new FileUploadPage();
     const exampleFileName = 'exampleFile.txt';
     const exampleFilePath = `./cypress/fixtures/${exampleFileName}`;
