@@ -24,6 +24,15 @@ export class JavaScriptAlertsPage {
         cy.get(this.javascriptAlertButton).contains("Click for JS Alert").click();
     }
 
+    clickAndAcceptJavaScriptAlert() {
+        cy.window().then((win) => {
+            cy.stub(win, 'alert').as('alert')
+        });
+
+        this.clickJSAlertButton()
+        cy.get('@alert').should('have.been.calledWith', 'I am a JS Alert');
+    }
+
     clickJSConfirmButton() {
         cy.get(this.javascriptAlertButton).contains("Click for JS Confirm").click();
     }

@@ -15,14 +15,7 @@ describe('JavaScript Alerts Page Tests', () => {
     });
 
     it('Verify the JavaScript alert appears and saves user response', () => {
-        cy.window().then((win) => {
-        cy.stub(win, 'alert').as('alert')
-        })
-
-        javascriptAlertsPage.clickJSAlertButton()
-
-        cy.get('@alert').should('have.been.calledWith', 'I am a JS Alert')
-
+        javascriptAlertsPage.clickAndAcceptJavaScriptAlert();
         javascriptAlertsPage.getResultsParagraph()
             .should('have.text', 'You successfully clicked an alert');
 
