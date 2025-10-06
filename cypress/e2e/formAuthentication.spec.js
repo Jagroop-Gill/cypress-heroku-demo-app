@@ -1,6 +1,6 @@
 import { FormAuthenticationPage } from "../pages/formAuthenticationPage";
 
-describe('File Download Page Tests', () => {
+describe('Form Authentication Page Tests', () => {
     const formAuthenticationPage = new FormAuthenticationPage();
     const correctUsername = 'tomsmith';
     const correctPassword = 'SuperSecretPassword!';

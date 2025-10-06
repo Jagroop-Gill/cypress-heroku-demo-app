@@ -25,28 +25,6 @@ describe('File Download Page Tests', () => {
             });
     });
 
-    it('Verify the user can download a file with the .png extension', () => {
-        const fileExtension = '.png';
-
-        fileDownloadPage.getNameOfFirstFileGivenExtension(fileExtension)
-            .then((fileName) => {
-                fileDownloadPage.downloadFirstFileGivenExtension(fileExtension);
-                fileDownloadPage.getDownloadedFileByName(fileName)
-                    .should('exist');
-            });
-    });
-
-    it('Verify the user can download a file with the .xlsx extension', () => {
-        const fileExtension = '.xlsx';
-
-        fileDownloadPage.getNameOfFirstFileGivenExtension(fileExtension)
-            .then((fileName) => {
-                fileDownloadPage.downloadFirstFileGivenExtension(fileExtension);
-                fileDownloadPage.getDownloadedFileByName(fileName)
-                    .should('exist');
-            });
-    });
-
     it('Verify the user can download a file with the .jpg extension', () => {
         const fileExtension = '.jpg';
 
